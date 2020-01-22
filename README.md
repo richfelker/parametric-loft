@@ -27,6 +27,13 @@ initial and final curves must be degenerate (single point) curves so
 that the resulting 3D object is a manifold, *or* the initial and final
 curve can coincide exactly, producing a loop (toroid, knot, etc.).
 
+Curves should be oriented counter-clockwise seen from the perspective
+of the next curve in the sequence, clockwise seen from the persepctive
+of the previous curve. In the case where they are planar, this means
+the normal should point "along the direction of the loft". This
+orientation ensures that the resulting polyhedron will have all face
+normals pointing inward, as expected by OpenSCAD.
+
 
 ## Output
 
