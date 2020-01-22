@@ -44,8 +44,8 @@ module loft_core(curves,cap_start=false,cap_end=false) {
 			    [(k+1)*n+j, (k+1)*n+j+1, c0+k*(n-1)+j],
 			    [(k+1)*n+j+1, k*n+j+1, c0+k*(n-1)+j],
 			    [k*n+j+1, k*n+j, c0+k*(n-1)+j] ]) v,
-		if (cap_start) [ for (j=[n-2:-1:0]) j ],
-		if (cap_end) [ for (j=[0:1:n-2]) n*(m-1)+j ],
+		if (cap_start) [ for (j=[0:1:n-2]) j ],
+		if (cap_end) [ for (j=[n-2:-1:0]) n*(m-1)+j ],
 	];
 	polyhedron(points=points,faces=faces,convexity=20);
 }
